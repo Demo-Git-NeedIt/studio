@@ -1,0 +1,22 @@
+(function executeRule(current, previous /*null when async*/) {
+
+	var user = new GlideRecord("sys_user");
+
+user.addActiveQuery();
+
+user.query;
+
+while (user.next()){
+
+var rel = new GlideRecord("sys_user_grmember");
+
+rel.initialize();
+
+rel.user = user.sys_id+"";
+
+rel.group="317b4576976711101b01322e6253af99";
+
+rel.insert();
+
+}
+})(current, previous);
